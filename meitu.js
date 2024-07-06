@@ -28,7 +28,7 @@ if (url.startsWith('https://api.account.meitu.com/users/show_current.json')) {
   response.data.vip_tmp_end_time = -1;
   response.data.sub_card_modules = { '02': '200,201,203,204,206,207,208,209,210,211,212,218,400,230,215,213,216,217,220,222,223,224' };
 } else if (url.indexOf('vip/rights/free_info.json') !== -1) {
-  const function_8012 = {
+  const function_id = {
     function_count: 10000,
     limit_free_count: 20000,
     right_count: 0,
@@ -36,8 +36,12 @@ if (url.startsWith('https://api.account.meitu.com/users/show_current.json')) {
     free_limit_by_member: 30000,
     member_policy_period: 3,
     member_policy_free_limit: 40000,
+  };
+
+  // for each key of response.data.function_info, set the value to function_id
+  for (let key in response.data.function_info) {
+    response.data.function_info[key] = function_id;
   }
-  response.data.function_info['8012'] = function_8012;
 }
 
 $done({ body: JSON.stringify(response) });
