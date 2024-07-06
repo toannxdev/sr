@@ -16,9 +16,7 @@ if (url.startsWith('https://api.account.meitu.com/users/show_current.json')) {
   response.data.vip_type = 1;
   response.data.free_trial = 0;
   response.data.is_expert_user = 1;
-} else if (
-  url.startsWith('https://api.xiuxiu.meitu.com//v1/vip/vip_show.json')
-) {
+} else if (url.indexOf('vip/vip_show.json') !== -1) {
   response.data.is_valid_user = 1;
   response.data.vip_type = 1;
   response.data.sub_type = 2;
