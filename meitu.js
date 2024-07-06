@@ -42,6 +42,9 @@ if (url.startsWith('https://api.account.meitu.com/users/show_current.json')) {
   for (let key in response.data.function_info) {
     response.data.function_info[key] = function_id;
   }
+} else if (url.indexOf('vip/rights/pay_info.json') !== -1) {
+  response.data.type = 0;
+  response.data.type_desc = 'VIP';
 }
 
 $done({ body: JSON.stringify(response) });
