@@ -8,6 +8,14 @@ if (url.startsWith('https://api.account.meitu.com/users/show_current.json')) {
   response.response.user.screen_name = 'Meitu Hacker';
   response.response.user.gender = 'm';
 } else if (
+  url.startsWith(
+    'https://api.xiuxiu.meitu.com/v1/account/verify_credentials.json'
+  )
+) {
+    response.data.screen_name = 'Meitu Hacker';
+    response.data.vip_type = 1;
+    response.data.free_trial = 0;
+} else if (
   url.startsWith('https://api.xiuxiu.meitu.com//v1/vip/vip_show.json')
 ) {
   response = {
