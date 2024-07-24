@@ -17,7 +17,7 @@ try {
         duration_unit: 'months',
         duration_value: 1000,
         auto_renew_status: true,
-      },
+      }
     ];
   }
 } catch (error) {
