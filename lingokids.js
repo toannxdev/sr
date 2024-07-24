@@ -3,7 +3,7 @@ let url = $request.url;
 
 try {
   if (url.endsWith('/v1/renovate_session')) {
-    response.info.subscriptions = [
+    response['info']['subscriptions'] = [
       {
         id: 6013463,
         status: 'trial',
