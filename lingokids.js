@@ -21,7 +21,7 @@ try {
             plan_id: 'lk.ios.s1m.t7d.p15.v2',
             duration_unit: 'months',
             duration_value: 1000,
-            auto_renew_status: true,
+            auto_renew_status: true
         }]
     }
 } catch (error) {
