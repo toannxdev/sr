@@ -7,7 +7,7 @@ try {
         url.endsWith('/auth/provider') ||
         url.endsWith('/users/profile') ||
         url.endsWith('/users/identities') ||
-        url.endsWith('/v1/renoate_session')
+        url.endsWith('/v1/renovate_session')
     ) {
         response.info.subscriptions = [{
             id: 6013463,
@@ -20,7 +20,7 @@ try {
             ends_at: 2722404603,
             plan_id: 'lk.ios.s1m.t7d.p15.v2',
             duration_unit: 'months',
-            duration_value: 1,
+            duration_value: 1000,
             auto_renew_status: true,
         }]
     }
